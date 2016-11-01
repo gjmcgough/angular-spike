@@ -18,3 +18,4 @@
     $scope.incrementUpvotes = function(post){
       post.upvotes += 1;
     };
+  }]);

@@ -28,5 +28,16 @@ app.factory('posts', [
       });
   };
 
+  o.get = function(id) {
+    return $http.get('/posts/' + id + '.json')
+      .then(function(response){
+        return response.data
+      });
+  };
+
+  o.addComment = function(id, comment) {
+    return $http.post('/posts/' + id + '/comments.json', comment);
+  };
+
   return o;
 }]);
